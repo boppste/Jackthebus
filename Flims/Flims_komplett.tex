@@ -1,0 +1,54 @@
+\documentclass[11pt,nswissgerman]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[latin2]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3.5cm,headheight=3cm,headsep=1cm,footskip=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage[position=bottom]{subfig}
+\usepackage{titletoc}
+\usepackage{float}
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\makeatother
+\usepackage{babel}
+\usepackage[
+            colorlinks=true,
+            urlcolor=green,
+            linkcolor=black
+]{hyperref}
+\setcounter{secnumdepth}{1} % levels under \section are not numbered
+\setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
+\begin{document}
+\author{Stefan Bopp}
+\title{\Huge Tagebuch Flims 2011\vspace{2cm}
+\includegraphics[width=0.4\textwidth]{../Bilder/Logo/Logo.png}
+}
+\maketitle
+\vfill
+\tableofcontents
+
+\newpage
+
+\lhead{Flims 2011}
+
+\rhead{jackthebus.com}
+
+\cfoot{\thepage}
+\input{Flims.tex}
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=14cm, keepaspectratio]{../Bilder/Logo/Logo_trans.png}
+    \label{img:Logo}
+\end{figure}
+\vfill
+    \begin{center}
+        {\huge  Weitere Informationen zum Bus und unseren Reisen sind auf der Homepage {\url{www.jackthebus.com}} zu finden}
+\end{center}
+
+\end{document}

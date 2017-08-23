@@ -1,0 +1,56 @@
+\documentclass[11pt,nswissgerman]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[latin2]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3.5cm,headheight=3cm,headsep=1cm,footskip=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{wrapfig}
+\usepackage[draft]{graphicx}
+\usepackage[position=bottom]{subfig}
+\usepackage{titletoc}
+\usepackage{lipsum}
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\makeatother
+\usepackage{babel}
+
+
+
+\setcounter{secnumdepth}{1} % levels under \section are not numbered
+\setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
+
+
+
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=10cm]{../Bilder/Logo/Logo.png} \\
+\vspace{2cm}
+{\huge\bfseries Gesammelte Werke von jackthebus.com\par}
+\vspace{2cm}
+{\large Stefan Bopp} \\
+{\large Chantal Frunz}
+\vfill
+{\Large V1.1}
+\thispagestyle{empty}
+
+\end{titlepage}
+\newpage
+
+
+
+
+\tableofcontents
+
+\newpage
+
+\lhead{Dolomiten 2014}
+
+\rhead{jackthebus.com}
+
+\cfoot{\thepage}
+\input{/home/stebo/Documents/1_Privat/2_Hobby/Homepage_Bus/Texte/Latex/Beispiele_Vorlagen/Beispiel.tex}
+
+\end{document}

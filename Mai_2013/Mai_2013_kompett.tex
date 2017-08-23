@@ -1,0 +1,34 @@
+\documentclass[nswissgerman]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[latin2]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3.5cm,headheight=3cm,headsep=1cm,footskip=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{titletoc}
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\makeatother
+\usepackage{babel}
+\setcounter{secnumdepth}{1} % levels under \section are not numbered
+\setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
+\begin{document}
+\author{Stefan Bopp}
+\title{\Huge Mai 2013}
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\lhead{Mai 2013}
+
+\rhead{jackthebus.com}
+
+\cfoot{\thepage}
+\input{/home/stebo/Documents/1_Privat/2_Hobby/Homepage_Bus/Texte/Latex/Mai_2013/Mai_2013.tex}
+
+\end{document}

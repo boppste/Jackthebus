@@ -1,0 +1,103 @@
+\documentclass[11pt,nswissgerman]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[latin2]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3.5cm,headheight=3cm,headsep=1cm,footskip=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[T1]{fontenc} %sollte bessere Zeilenumbrüche geben
+\usepackage{titletoc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tocbibind} %Damit erscheinen die Verzeichnisse im Inhaltsverzeichnis
+\usepackage{epstopdf} %Packet um .eps Dateien einzubinden
+\usepackage[position=bottom]{subfig}
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+urlcolor = green,
+citecolor = black] {hyperref}
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\makeatother
+\usepackage{babel}
+\setcounter{secnumdepth}{1} % levels under \section are not numbered
+\setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
+
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[width=10cm]{../Bilder/Logo/Logo.png} \\
+\vspace{2cm}
+{\huge\bfseries Gesammelte Werke von jackthebus.com\par}
+\vspace{2cm}
+{\Large Stefan Bopp} \\
+{\Large Chantal Frunz}
+\vfill
+{\large V1.5}
+\thispagestyle{empty}
+
+\end{titlepage}
+
+\newpage
+\lhead{\leftmark}
+\rhead{jackthebus.com}
+
+\cfoot{\thepage}
+
+\tableofcontents
+\newpage
+\section{Flims 2011}
+\input{../Flims/Flims.tex}
+\newpage
+\section{Moon and Stars 2011}
+\input{../MoonandStars/MoonandStars.tex}
+\newpage
+\section{Korsika 2011}
+\input{../Korsika/Korsika.tex}
+\newpage
+\section{Aegerisee 2012}
+\input{../Aegeri/Aegeri.tex}
+\newpage
+\section{Sommer 2012}
+\input{../Sommer2012/Sommer2012.tex}
+\newpage
+\section{Mai 2013}
+\input{../Mai_2013/Mai_2013.tex}
+\newpage
+\section{Sardinien 2013}
+\input{../Sardinien/Sardinien.tex}
+\newpage
+\section{Brienzersee 2014}
+\input{../Brienzersee_2014/Brienzersee.tex}
+\newpage
+\section{Dolomiten 2014}
+\input{../Dolomiten/Dolomiten.tex}
+\newpage
+\section{Walenstadt 2017}
+\input{../Walenstadt/Walenstadt.tex}
+\newpage
+\section{Sinsheim und Speyer 2017}
+\input{../Sinsheim_und_Speyer/Sinsheim_und_Speyer.tex}
+\newpage
+\listoffigures
+\newpage
+\appendix
+\section{Homepage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=14cm, keepaspectratio]{../Bilder/Logo/Logo_trans.png}
+    \label{img:Logo_trans}
+\end{figure}
+\vfill
+    \begin{center}
+        {\huge  Weitere Informationen zum Bus und unseren Reisen sind auf der Homepage {\url{www.jackthebus.com}} zu finden}
+\end{center}
+\end{document}
