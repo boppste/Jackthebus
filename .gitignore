@@ -221,3 +221,5 @@ TSWLatexianTemp*
 #Pictures
 .jpg
 
+# Directory File 
+.directory
