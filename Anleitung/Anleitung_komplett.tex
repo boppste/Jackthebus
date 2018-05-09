@@ -12,7 +12,6 @@
 \usepackage{titletoc}
 \usepackage{float}
 \makeatletter
-\usepackage[T1]{fontenc}
 \@ifundefined{date}{}{\date{}}
 \makeatother
 \usepackage{babel}
@@ -21,11 +20,11 @@
             urlcolor=green,
             linkcolor=black
 ]{hyperref}
-\setcounter{secnumdepth}{1} % levels under \section are not numbered
-\setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
+\setcounter{secnumdepth}{2} % levels under \section are not numbered
+\setcounter{tocdepth}{3}    % levels under \subsection are not listed in the TOC
 \begin{document}
 \author{Stefan Bopp}
-\title{\Huge Tagebuch Bretagne 2016\vspace{2cm}
+\title{\Huge Anleitung von Jack the Bus\vspace{2cm}
 \includegraphics[width=0.4\textwidth]{../Bilder/Logo/Logo.png}
 }
 \maketitle
@@ -34,12 +33,12 @@
 
 \newpage
 
-\lhead{Bretagne 2016}
+\lhead{Anleitung Jack the Bus}
 
 \rhead{jackthebus.com}
 
 \cfoot{\thepage}
-\input{Bretagne.tex}
+\input{Anleitung.tex}
 \newpage
 
 \begin{figure}[H]
