@@ -22,7 +22,6 @@
 ]{hyperref}
 \setcounter{secnumdepth}{2} % levels under \section are not numbered
 \setcounter{tocdepth}{3}    % levels under \subsection are not listed in the TOC
-
 \begin{document}
 \author{Stefan Bopp}
 \title{\Huge Anleitung von Jack the Bus\vspace{2cm}
@@ -30,7 +29,6 @@
 }
 \maketitle
 \vfill
-\rhead{jackthebus.com}
 \lhead{Anleitung Jack the Bus}
 \tableofcontents
 
