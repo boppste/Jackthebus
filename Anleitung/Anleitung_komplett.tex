@@ -1,4 +1,4 @@
-\documentclass[11pt,nswissgerman]{article}
+\documentclass[11pt,nswissgerman,]{article}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[latin2]{inputenc}
@@ -11,6 +11,7 @@
 \usepackage[position=bottom]{subfig}
 \usepackage{titletoc}
 \usepackage{float}
+\usepackage{nameref}
 \makeatletter
 \@ifundefined{date}{}{\date{}}
 \makeatother
@@ -20,8 +21,8 @@
             urlcolor=green,
             linkcolor=black
 ]{hyperref}
-\setcounter{secnumdepth}{2} % levels under \section are not numbered
-\setcounter{tocdepth}{3}    % levels under \subsection are not listed in the TOC
+\setcounter{secnumdepth}{4} % levels under \section are not numbered
+\setcounter{tocdepth}{4}    % levels under \subsection are not listed in the TOC
 
 \begin{document}
 \author{Stefan Bopp}
@@ -32,18 +33,16 @@
 \vfill
 \rhead{jackthebus.com}
 \lhead{Anleitung Jack the Bus}
+\cfoot{\thepage}
+\newpage
 \tableofcontents
 
 \newpage
 
-\lhead{Anleitung Jack the Bus}
-
-\rhead{jackthebus.com}
-
-\cfoot{\thepage}
 \input{Anleitung.tex}
 \newpage
-
+\listoffigures
+\newpage
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth,height=14cm, keepaspectratio]{../Bilder/Logo/Logo_trans.png}

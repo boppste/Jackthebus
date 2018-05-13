@@ -10,9 +10,117 @@
 % Mehr Informationen sind auf jackthebus.com zu finden
 
 
+\section{Sinn und Zweck der Anleitung}
+Die Anleitung soll eine Hilfe und Informationsquelle für alle darstellen. 
+Die Systeme von Jack werden dank meiner Bastelleidenschaft nicht übersichtlicher.
+Dies ist ein Versuch Ordnung zu schaffen und es anderen Personen ermöglichen den Bus auch zu betreiben.
+Eine ausgedruckte Kopie dieses Dokuments befindet sich im Bus.
+Die aktuelle Version ist hier zu finden:
+
+
 \section{Elektrisches System}
-\subsection{Übersicht}
-Die Batterie sorgt für eine von aussen unabhängige Stromversorgung im Bus. Es gibt drei verschiedene Arten die Batterie zu laden:
+\subsection{Schema}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3, angle=90]{../Bilder/Anleitung/EL_System.png}
+	\caption{Übersicht über das elektrische System}
+	\label{Schema}
+\end{figure}
+
+\subsection{Übersicht der Bedienung}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.8\textwidth]{../Bilder/Anleitung/Bedienung.png}
+	\caption{Elektrisches Bedienpanel in der linken Seitenwand}
+    \label{Bedienpanel}
+\end{figure}
+
+In der linken Seitenwand befindet sich die Bedienung der Batterieversorgung, Solaranlage, Heizung sowie die Sicherung für den 230V Anschluss.
+Beschreibung der Elemente:
+
+\begin{enumerate}
+    \item USB Anschluss
+    \item Lichtschalter (linker Schalter ohne Funktion)
+    \item Ein-/ Auschalter für den Inverter
+    \item Panel für die Standheizung
+    \item Sicherung inklusive FI für den 230V Anschluss
+    \item Display für die Batteriesteuerung
+    \item Display für die Solarsteuerung
+\end{enumerate}
+
+\subsection{Solaranlage}
+
+
+\subsubsection{Komponenten}
+Das Solarsystem besteht aus folgenden Komponenten:
+
+\begin{itemize}
+     \item Solarpanel auf dem Dach
+     \item Solarregler MPP 165 Duo Digital unter dem Fahrersitz
+     \item Solardisplay in der linken Seitenwand
+\end{itemize} 
+
+(Siehe Abbildung \ref{Schema} auf Seite \pageref{Schema} für eine Gesamtübersicht)
+
+\subsubsection{Solarpanel Wattstunde FLEX}
+Auf dem Dach befindet sich ein flexibles Solarpanel, welches direkt auf das Busdach geklebt wurde
+
+\subsubsection{Solarregler MPP 165 Duo Digital}
+Unter dem Fahrersitz befindet sich ein Solarregler, welcher die von dem Solarpanel aufgefangene Energie für die Batterien aufbereitet.
+Dank MPP-Funktion (Maximum Power Point) wird sichergestellt, dass eine maximale Leistundsausbeute zustanden kommt.
+
+\subsubsection{Solardisplay in der linken Seitenwand}
+Dient zur Information.
+Keine Einstellungsmöglichkeiten zur Steuerung der Anlage vorhanden
+
+\subsubsection{Bedienung und Beschreibung}
+Ein 100 Watt Solarpanel auf dem Dach des Busses sorgt für die Energieversorgung falls sonst keine Energiequelle vorhanden ist. 
+Für die Steuerung des Systems ist ein kleines Display (Nummer 7 in der Abbildung \ref{Bedienpanel} auf der Seite \pageref{Bedienpanel}) in der linken Seitenwand verbaut.
+Es dient hauptsächlich zur Anzeige des Status der Anlage.
+Das System schaltet sich automatisch ab und an, je nach dem Stand der Energiegewinnung
+Falls die Batterien voll geladen sind, kann der Solarregler keine zusätzliche Energie der Batterie zufügen.
+Dann kann auch bei schönstem Wetter die Stromproduktion gegen Null gehen.
+Ist somit also kein Fehler der Anlage.
+Das zweite Display zeigt den Ladezustand der Batterie an und kann somit zur Prüfung dienen.
+Die Solaranlanlage versorgt in erster Linie die Verbraucherbatterie.
+Zusätzlich wird die Starterbatterie mit bis zu 2A für die Ladungserhaltung mit geladen.
+Das Solarmodul muss nicht gesteuert werden.
+Das Display dient nur zu Information und wird folgendermassen bedient:
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.5\textwidth]{../Bilder/Anleitung/Solarcomputer.png}
+	\caption{Solarpanel}
+    \label{Solarpanel}
+\end{figure}
+
+\begin{enumerate}
+    \item Taste 1: Weiterschalten der Anzeige, Beleuchtung Einstellen (3 s)
+    \item Taste 2: Zurückschalten der Anzeige, Beleuchtung Einstellen (3 s)
+    \item Taste 3: Ein-/Ausschalten der Anzeige, Reset (3 s)
+\end{enumerate}
+
+Sobald oben rechts im Display das \glqq Charge\grqq{} Symbol angezeigt wird, fliesst Strom von der Solaranlage an die Batterien
+
+\subsection{Batterie Management}
+\subsubsection{Komponenten}
+\begin{itemize}
+     \item Verbraucherbatterie
+     \item Starterbatterie
+     \item Shunt Widerstand
+     \item Switch Unit 40
+     \item Battery Power Display
+\end{itemize} 
+
+(Siehe Abbildung \ref{Schema} auf Seite \pageref{Schema} für eine Gesamtübersicht)
+
+\subsubsection{Verbraucherbatterie}
+Die Verbraucherbatterie versorgt alle elektrischen Verbraucher welche nicht für das Fahren des Busses gebraucht werden.
+Es handelt sich dabei um eine 12V Gel Batterie, welche für die Entnahme von kleinen Strömen geeignet ist.
+Die Kapazität der Batterie beträgt 70Ah.
+In Verbindung mit den verschiedenen Ladeoptionen kann so die Grundversorgung sehr gut gewährleistet werden.
+Es gibt drei verschiedene Arten die Batterie zu laden:
 
 \begin{enumerate}
 \item Die Solaranlage 
@@ -24,59 +132,224 @@ Dieser Aufbau ermöglicht eine kontinuierliche Stromversorgung.
 Während dem Fahren wird die Batterie über das Batterie zu Batterieladegerät geladen, auf dem Campinplatz wird mittels 230V die Batterie geladen und sobald die Sonne scheint, lädt das Solarpanel mit maximum 70 W die Batterie. 
 Es sollte also immer genügend Strom vorhanden sein.
 
-Auf der Nachfolgenden Seite ist eine Übersicht des elektrischen Systems zu finden.
+\subsubsection{Starterbatterie}
+Die Starterbatterie dient in erster Linie zum Starten des Busses.
+Zusätzlich werden darüber die elektrischen Verbraucher des Busses mit Energie versorgt (Licht, normale Innenraumbeleuchtung, Lüftung und Scheibenwischer).
 
-\nextpage
-\begin{figure}[H]
-	\centering
-  \includegraphics[scale=0.4, angle=90]{../Bilder/Anleitung/EL_System.pdf}
-	\caption{Übersicht über das elektrische System}
-	\label{fig1}
-\end{figure}
+\subsubsection{Shunt Widerstand}
+Um die verbleibende Kapazität der Batterie zu errechnen ist es notwendig die entnommene Energiemenge zu kennen.
+Das wird über einen Shunt Widerstand gemacht.
+Diese Strommessung misst alle ein- und ausgehenden Ströme der Verbraucherbatterie.
+Zusätzlich wird die Spannung der beiden Batterien gemessen. 
 
-\subsection{Solaranlage}
+\subsubsection{Switch Unit 40}
+Die Switch Unit dient zu Trennung der Verbaucher von der Verbraucherbatterie.
+Dadurch kann die Verbraucherbatterie vor Beschädigung geschützt werden.
+Die Steuerung dieses Relais geschieht über das Battery Power Display.
 
-Ein 100 Watt Solarpanel auf dem Dach des Busses sorgt für die Energieversorgung wenn sonst keine Energiequelle vorhanden ist. 
-Für die Steuerung des Systems ist ein kleines Display in der linken Seitenwand verbaut.
-Es dient hauptsächlich zur Anzeige des Status der Anlage.
-Einstellungen darüber müssen keine gemacht werden.
-Das System schaltet sich automatisch ab und an, je nach dem Stand der Energiegewinnung
-Falls die Batterien voll geladen sind, kann keine zusätzliche Energie produziert werden.
-Dann kann auch bei schönstem Wetter die Stromproduktion gegen Null gehen.
-Ist somit also kein Fehler der Anlage.
-Das zweite Display zeigt den Ladezustand der Batterie an und kann somit zur Prüfung dienen.
+\subsubsection{Battery Power Display}
+Alle Informationen der Batterien werden hier angezeigt. Das Panel ist in der linken Seitenwand eingebaut. (Siehe Nr. 6 auf der  Abbildung \ref{Bedienpanel})
 
-\subsection{Batterie Management}
+\subsubsection{Bedienung und Beschreibung}
+Das Batterie Management System dient zum Steuern, Schutz und zur Überwachung der Batterie.
+
+
+\newpage
+\subsubsection{Manueller Override}
+Inhalt
 \subsection{Batterie zu Batterie Ladegerät}
+Inhalt
 \subsection{230V zu Batterie}
+Inhalt
 \subsection{Inverter}
+Inhalt
 \subsection{USB Anschluss}
+Inhalt
 \subsection{Licht}
+Inhalt
 \subsection{Sicherungen}
+Inhalt
 \subsection{Ersatzsicherungen}
+Inhalt
 \section{Standheizung}
+Inhalt
 \subsection{Heizen}
+Inhalt
 \subsection{Lüften}
+Inhalt
+\subsection{Fehlercodes}
+Inhalt
+\subsection{Reset}
+Inhalt
 \section{Kühltruhe}
+Inhalt
 \section{Wasser}
+Inhalt
 \subsection{Wasserpumpe}
+Inhalt
 \subsection{Abwasser}
+Inhalt
 \subsection{Frischwasser Kanister}
+Inhalt
 \section{Kochen}
+Inhalt
 \subsection{Küchenutensilien}
+Inhalt
 \section{Radio}
+Inhalt
 \subsection{Mit eingeschalteter Zündung}
+Inhalt
 \subsection{Betrieb ohne Zündung}
+Inhalt
 \section{Pneu Wechsel}
+Inhalt
 \subsection{Anzugsmomente}
-\subsection{Ludtdruck}
+Inhalt
+\subsection{Luftdruck}
+Inhalt
 \section{Aufstelldach}
+Inhalt
+\section{Klapptisch}
+Inhalt
 \section{Markise}
+Inhalt
 \section{Paulchen}
+Inhalt
 \section{Ordner mit allen Unterlagen}
+Inhalt
 \section{Ersatzteile}
+Inhalt
 \section{Werkzeug}
+Inhalt
 \section{Versicherung}
+Inhalt
 \section{TCS}
+Inhalt
+\section{Abläufe}
+\subsection{Abfahren}
+\subsection{Reisen}
+\subsection{Aufstellen}
+\subsection{Aufräumen}
+\subsection{Zurückstellen}
+\newpage
+\section{Packliste}
+\subsection{Allgemein}
+\begin{itemize}
+    \item Fotoapparat
+    \item Ladegerät Fotoapparat
+    \item MP3 Player
+    \item Ladegeräte Allgemein
+    \item Dokumente (Ausweis, Pass)
+    \item Anti Brumm
+    \item Linsen (Dose und Flüssigkeit)
+    \item Schlafsack
+    \item Kissen
+    \item Decken
+    \item Kleider
+    \item Schnur
+    \item Regenjacke
+    \item Kerzen
+    \item Feuerzeug
+    \item Klämmerli
+    \item Nastuch
+    \item Feuchttücher
+    \item Sackmesser
+    \item Taschenlampe
+    \item Stirnlampe
+    \item Reiseführer
+    \item Buch
+    \item Schreibzeug
+    \item Feldstecher
+    \item Kreditkarte
+    \item Krankenkasse Karte
+    \item Medikamente
+    \item Rucksack
+    \item Hip Bag
+\end{itemize}
+ 
+\subsection{Küche}
+\begin{itemize}
+    \item Gewürze
+    \item Grill
+    \item Besteck
+    \item Wasserflasche
+    \item Gas
+    \item Grillzange 
+    \item Abtrocknungstuch
+    \item Abwaschmittel
+    \item Schokoladenpulver
+    \item Löffeli
+    \item Kafferahm
+    \item Schöpfkelle
+    \item Sieb
+    \item Tupperware
+    \item Abfallsäcke
+    \item kleine Plastiksäcke
+    \item Campinglaterne
+    \item Raco Boxen (Abwasch und Altglas)
+    \item Abwaschbürste
+    \item Schwamm
+    \item Haushaltspapier
+    \item WC Papier
+\end{itemize}
+
+\subsection{Sommer}
+\begin{itemize}
+     \item Badesachen
+     \item Badetuch
+     \item Speedmington
+     \item Hut
+     \item Sonnencreme
+     \item Sonnenbrille
+     \item Turnschuhe
+     \item Picknickdecke
+     \item Stühle
+     \item Tisch
+     \item Sonnenschirm
+     \item Flipflop
+\end{itemize}
+
+\subsection{Velo}
+\begin{itemize}
+    \item Velo Flickzeug
+    \item Velo - Bekleidung
+    \item Velo Schuhe
+    \item Riemen für die Befestigung der Fahrräder
+    \item Schloss
+    \item Pumpe
+    \item Navi für Velo
+    \item Bidon oder Camelback
+    \item Licht für den Abend
+\end{itemize}
+
+\subsection{Bus}
+\begin{itemize}
+    \item Paulchen montieren (wenn nötig)
+    \item Leuchtschild für Paulchen
+    \item Wasserstand kontrollieren
+    \item Luftdruck kontrollieren
+    \item Öl Menge kontrollieren
+    \item Scheibenwaschwasserstand prüfen
+    \item Tanken
+    \item Reserve-Benzinkanister (je nach Land)
+    \item Kabelrolle und verschiedene Übergangsstecker
+    \item Zweite Kabelrolle (optional)
+    \item Warndreieck
+    \item Autoapotheke
+    \item Leuchtwesten
+    \item Ersatzrad (gepumpt!!)
+    \item Schlauchschellen und Kabelbinder
+    \item Klebeband
+    \item Eurostecker (Strom)
+    \item Werkzeug
+    \item Stirnlampe
+    \item Rätschensatz
+    \item PB Schraubenziehersatz
+    \item Lötkolben
+    \item Draht
+    \item Voltmeter (Batterien überprüfen)
+\end{itemize}
+
+
 
 
