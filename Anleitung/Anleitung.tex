@@ -49,8 +49,26 @@ Beschreibung der Elemente:
     \item Display für die Solarsteuerung
 \end{enumerate}
 
-\subsection{Solaranlage}
+\subsection{Elektronik unter dem Fahrersitz}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.8\textwidth]{../Bilder/Anleitung/Elektronik_Sitz.png}
+	\caption{Elektronik unter dem Fahrersitz}
+    \label{Fahrersitz}
+\end{figure}
 
+\begin{enumerate}
+    \item Inverter
+    \item Shunt Widerstand für die Strommessung
+    \item Solarregler
+    \item Switch Unit
+    \item Sicherungs Panel
+    \item Verbraucherbatterie
+    \item 230V Batterieladegerät
+\end{enumerate}
+
+\newpage
+\subsection{Solaranlage}
 
 \subsubsection{Komponenten}
 Das Solarsystem besteht aus folgenden Komponenten:
@@ -68,7 +86,7 @@ Auf dem Dach befindet sich ein flexibles Solarpanel, welches direkt auf das Busd
 
 \subsubsection{Solarregler MPP 165 Duo Digital}
 Unter dem Fahrersitz befindet sich ein Solarregler, welcher die von dem Solarpanel aufgefangene Energie für die Batterien aufbereitet.
-Dank MPP-Funktion (Maximum Power Point) wird sichergestellt, dass eine maximale Leistundsausbeute zustanden kommt.
+Dank MPP-Funktion (Maximum Power Point) wird sichergestellt, dass eine maximale Leistungsausbeute zustanden kommt.
 
 \subsubsection{Solardisplay in der linken Seitenwand}
 Dient zur Information.
@@ -152,13 +170,51 @@ Alle Informationen der Batterien werden hier angezeigt. Das Panel ist in der lin
 
 \subsubsection{Bedienung und Beschreibung}
 Das Batterie Management System dient zum Steuern, Schutz und zur Überwachung der Batterie.
+Bei langer Standzeit, werden über das Display die Verbraucher von der Batterie getrennt.
+Wird also der Bus aus der Tiefgarage geholt, ist zuerst die Versorgung einzuschalten.
+Der Bus lässt sich auch ohne Zuschalten der Verbraucherbatterie betreiben, jedoch funktioniert das Radio, die Kühltruhe und etliche andere elektrisch betriebene Sachen nicht.
+So funktioniert das Zu- und Wegschalten der Verbraucherbatterie:
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.5\textwidth]{../Bilder/Anleitung/Batteriecomputer.png}
+	\caption{Batteriecomputer}
+    \label{Batteriecomputer}
+\end{figure}
 
 
-\newpage
+\begin{itemize}
+    \item Einschalten: drei Sekunden auf Taste 2 drücken
+    \item Ausschalten: drei Sekunden auf Taste 1 drücken
+    \item Mittels kurzem Druck auf die Taste 1 oder 2 kann durch die verschiedenen Anzeigen geschaltet werden:
+    \begin{itemize}
+        \item Spannung der Verbraucherbatterie
+        \item Spannung der Starterbatterie
+        \item Strom der Verbraucherbatterie
+        \item Restlaufzeitanzeige
+        \item Kapazitätsanzeige in Ah
+        \item Kapazitätsanzeige in \%
+    \end{itemize}
+\end{itemize}
+
+Wird eine bestimmte Reskapazität unterschritten, werden die Verbraucher von der Batterie getrennt um die Batterie zu schützen.
 \subsubsection{Manueller Override}
-Inhalt
+Es gibt die Möglichkeit, das Relais manuell, ohne Display zu schalten. Nur notwendig falls das Display nicht funktioniert.
+
+\begin{figure}[H]
+	\centering
+  \includegraphics[width=0.8\textwidth]{../Bilder/Anleitung/Emergency.png}
+	\caption{Position des manuellen Override}
+    \label{Manueller Override}
+\end{figure}
+
 \subsection{Batterie zu Batterie Ladegerät}
-Inhalt
+Ein  Batterie zu Batterieladegerät befindet sich unter dem Beifahrersitz.
+Dieses lädt die Verbraucherbatterie sobald der Motor läuft.
+Gesteuert wird das Ladegerät über das Buseigene D+ Signal.
+Das System steuert sich selbst, es ist keine Interaktion notwendig.
+Ob dieses Ladegerät funktioniert, kann auf dem Battery Power Display abgelesen werden. 
+
 \subsection{230V zu Batterie}
 Inhalt
 \subsection{Inverter}
@@ -234,121 +290,83 @@ Inhalt
 \newpage
 \section{Packliste}
 \subsection{Allgemein}
-\begin{itemize}
-    \item Fotoapparat
-    \item Ladegerät Fotoapparat
-    \item MP3 Player
-    \item Ladegeräte Allgemein
-    \item Dokumente (Ausweis, Pass)
-    \item Anti Brumm
-    \item Linsen (Dose und Flüssigkeit)
-    \item Schlafsack
-    \item Kissen
-    \item Decken
-    \item Kleider
-    \item Schnur
-    \item Regenjacke
-    \item Kerzen
-    \item Feuerzeug
-    \item Klämmerli
-    \item Nastuch
-    \item Feuchttücher
-    \item Sackmesser
-    \item Taschenlampe
-    \item Stirnlampe
-    \item Reiseführer
-    \item Buch
-    \item Schreibzeug
-    \item Feldstecher
-    \item Kreditkarte
-    \item Krankenkasse Karte
-    \item Medikamente
-    \item Rucksack
-    \item Hip Bag
-\end{itemize}
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|}\hline
+Fotoapparat & Ladegerät Fotoapparat \\ \hline
+MP3 Player & Ladegeräte Allgemein \\ \hline
+Dokumente (Ausweis, Pass) & Anti Brumm \\ \hline
+Linsen (Dose und Flüssigkeit) & Schlafsack \\ \hline
+Kissen & Decken \\ \hline
+Kleider & Schnur \\ \hline
+Regenjacke & Kerzen \\ \hline
+Feuerzeug & Klämmerli \\ \hline
+Nastuch & Feuchttücher \\ \hline
+Sackmesser & Taschenlampe \\ \hline
+Stirnlampe & Reiseführer \\ \hline
+Buch & Schreibzeug \\ \hline
+Feldstecher & Kreditkarte \\ \hline
+Krankenkasse Karte & Medikamente \\ \hline
+Rucksack & Hip Bag \\ \hline
+\end{tabular}
+\end{center}
  
 \subsection{Küche}
-\begin{itemize}
-    \item Gewürze
-    \item Grill
-    \item Besteck
-    \item Wasserflasche
-    \item Gas
-    \item Grillzange 
-    \item Abtrocknungstuch
-    \item Abwaschmittel
-    \item Schokoladenpulver
-    \item Löffeli
-    \item Kafferahm
-    \item Schöpfkelle
-    \item Sieb
-    \item Tupperware
-    \item Abfallsäcke
-    \item kleine Plastiksäcke
-    \item Campinglaterne
-    \item Raco Boxen (Abwasch und Altglas)
-    \item Abwaschbürste
-    \item Schwamm
-    \item Haushaltspapier
-    \item WC Papier
-\end{itemize}
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|}\hline
+Gewürze & Grill \\ \hline
+Besteck & Wasserflasche \\ \hline
+Gas & Grillzange  \\ \hline
+Abtrocknungstuch & Abwaschmittel \\ \hline
+Schokoladenpulver & Löffeli \\ \hline
+Kafferahm & Schöpfkelle \\ \hline
+Sieb & Tupperware \\ \hline
+Abfallsäcke & kleine Plastiksäcke \\ \hline
+Campinglaterne & Raco Boxen (Abwasch und Altglas) \\ \hline
+Abwaschbürste & Schwamm \\ \hline
+Haushaltspapier & WC Papier \\ \hline
+\end{tabular}
+\end{center}
 
 \subsection{Sommer}
-\begin{itemize}
-     \item Badesachen
-     \item Badetuch
-     \item Speedmington
-     \item Hut
-     \item Sonnencreme
-     \item Sonnenbrille
-     \item Turnschuhe
-     \item Picknickdecke
-     \item Stühle
-     \item Tisch
-     \item Sonnenschirm
-     \item Flipflop
-\end{itemize}
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|}\hline
+Badesachen & Badetuch \\ \hline
+Speedmington & Hut \\ \hline
+Sonnencreme & Sonnenbrille \\ \hline
+Turnschuhe & Picknickdecke \\ \hline
+Stühle & Tisch \\ \hline
+Sonnenschirm & Flipflop \\ \hline
+\end{tabular}
+\end{center}
 
 \subsection{Velo}
-\begin{itemize}
-    \item Velo Flickzeug
-    \item Velo - Bekleidung
-    \item Velo Schuhe
-    \item Riemen für die Befestigung der Fahrräder
-    \item Schloss
-    \item Pumpe
-    \item Navi für Velo
-    \item Bidon oder Camelback
-    \item Licht für den Abend
-\end{itemize}
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|}\hline
+Velo Flickzeug & Velo - Bekleidung \\ \hline
+Velo Schuhe & Riemen für die Befestigung der Fahrräder \\ \hline
+Schloss & Pumpe \\ \hline
+Navi für Velo & Bidon oder Camelback \\ \hline
+Licht für den Abend & \\ \hline
+\end{tabular}
+\end{center}
 
 \subsection{Bus}
-\begin{itemize}
-    \item Paulchen montieren (wenn nötig)
-    \item Leuchtschild für Paulchen
-    \item Wasserstand kontrollieren
-    \item Luftdruck kontrollieren
-    \item Öl Menge kontrollieren
-    \item Scheibenwaschwasserstand prüfen
-    \item Tanken
-    \item Reserve-Benzinkanister (je nach Land)
-    \item Kabelrolle und verschiedene Übergangsstecker
-    \item Zweite Kabelrolle (optional)
-    \item Warndreieck
-    \item Autoapotheke
-    \item Leuchtwesten
-    \item Ersatzrad (gepumpt!!)
-    \item Schlauchschellen und Kabelbinder
-    \item Klebeband
-    \item Eurostecker (Strom)
-    \item Werkzeug
-    \item Stirnlampe
-    \item Rätschensatz
-    \item PB Schraubenziehersatz
-    \item Lötkolben
-    \item Draht
-    \item Voltmeter (Batterien überprüfen)
-\end{itemize}
+\begin{center}
+\begin{tabular}{|p{5cm}|p{5cm}|}\hline
+Paulchen montieren (wenn nötig) & Leuchtschild für Paulchen \\ \hline
+Wasserstand kontrollieren & Luftdruck kontrollieren \\ \hline
+Öl Menge kontrollieren & Scheibenwaschwasserstand prüfen \\ \hline
+Tanken & Reserve-Benzinkanister (je nach Land) \\ \hline
+Kabelrolle und verschiedene Übergangsstecker & Zweite Kabelrolle (optional) \\ \hline
+Warndreieck & Autoapotheke \\ \hline
+Leuchtwesten & Ersatzrad (gepumpt!!) \\ \hline
+Schlauchschellen und Kabelbinder & Klebeband \\ \hline
+Eurostecker (Strom) & Werkzeug \\ \hline
+Stirnlampe & Rätschensatz \\ \hline
+PB Schraubenziehersatz & Lötkolben \\ \hline
+Draht & Voltmeter (Batterien überprüfen) \\ \hline
+\end{tabular}
+\end{center}
 
 
 
