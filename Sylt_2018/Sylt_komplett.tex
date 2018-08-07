@@ -1,8 +1,7 @@
 \documentclass[11pt,nswissgerman]{article}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[latin2]{inputenc}
-\usepackage{textcomp}
+\usepackage[utf8x]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3.5cm,headheight=3cm,headsep=1cm,footskip=2cm}
 \usepackage{fancyhdr}
@@ -13,6 +12,7 @@
 \usepackage{titletoc}
 \usepackage{float}
 \makeatletter
+\usepackage[T1]{fontenc}
 \@ifundefined{date}{}{\date{}}
 \makeatother
 \usepackage{babel}
@@ -25,7 +25,7 @@
 \setcounter{tocdepth}{2}    % levels under \subsection are not listed in the TOC
 \begin{document}
 \author{Stefan Bopp}
-\title{\Huge Sylt und die Reise dahin und zurück 2018\vspace{2cm}
+\title{\Huge Deutschland und Sylt 2018\vspace{2cm}
 \includegraphics[width=0.4\textwidth]{../Bilder/Logo/Logo.png}
 }
 \maketitle
@@ -39,7 +39,7 @@
 \rhead{jackthebus.com}
 
 \cfoot{\thepage}
-\input{Sardinien.tex}
+\input{Sylt.tex}
 \newpage
 
 \begin{figure}[H]
